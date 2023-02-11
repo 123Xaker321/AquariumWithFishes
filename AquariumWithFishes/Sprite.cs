@@ -21,7 +21,14 @@ namespace AquariumWithFishes
             
         }
         public List<Sprite> Sprites = new List<Sprite>();
-        
+        public bool IsCollide(Sprite another)
+        {
+            if (another == null || another == this) return false;
+            Rectangle r1 = new Rectangle(Pb.Location, Pb.Size);
+            Rectangle r2 = new Rectangle(another.Pb.Location, another.Pb.Size);
+            return r1.IntersectsWith(r2);
+
+        }
 
     }
 }

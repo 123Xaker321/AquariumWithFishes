@@ -32,13 +32,6 @@ namespace AquariumWithFishes
             Pb.Left += (int)Vspeed.X;
             Pb.Top += (int)Vspeed.Y;
         }
-        public bool IsCollide(Fish another)
-        {
-            if (another == null || another == this) return false;
-            Rectangle r1 = new Rectangle(Pb.Location, Pb.Size);
-            Rectangle r2 = new Rectangle(another.Pb.Location, another.Pb.Size);
-            return r1.IntersectsWith(r2);
-
-        }
+        
     }
 }
