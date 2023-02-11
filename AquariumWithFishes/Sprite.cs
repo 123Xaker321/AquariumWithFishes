@@ -10,10 +10,11 @@ namespace AquariumWithFishes
 {
     public abstract class Sprite
     {
+        PictureBox Pb = new PictureBox();
         const int size = 20;
        protected Sprite(Control container)
         {
-            PictureBox Pb = new PictureBox();
+            
             container.Controls.Add(Pb);
             Pb.SizeMode = PictureBoxSizeMode.Zoom;
             Pb.Size = new Size(size, size / 2);
